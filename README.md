@@ -1,2 +1,6 @@
 # Probabilistic_Anonymisation
-R functions for (a) applying probabilistic anonymisation on individual-level data and (b) calculating a re-identification risk measure.  
+R functions for (a) applying probabilistic anonymisation on individual-level data and (b) calculating a re-identification risk measure.
+
+The function probAnon() (Probabilistic Anonymisation) uses the addition of random noise with known properties to some or all variables in an input dataset to obscure the true values of individual-level records. The noise is tuned to achieve any given degree of anonymity to avoid identification by an ‘attacker’ via the linking of patterns based on the values of such variables. Probabilistic anonymisation can retain the actual data utility because there are efficient Bayesian MCMC algorithms that treat the generated noise as measurement errors and 'remove' the noise at the analysis stage since its characteristics are known. This leads to consistent model parameter estimates.
+
+The function hRanks() assesses the disclosure risk of probabilistically anonymised data, using a metric proposed by Goldstein and Shlomo (2017). The approach assumes that the values of some identifying variables for individuals of interest from a given dataset, are also available to an external ‘attacker’ who wishes to identify those individuals so that they can interrogate their records in the dataset. Based on distance metrics between the true and the noisy data, the h-metric gives the probability that an attacker has to detect a desired record.
