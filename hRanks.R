@@ -53,10 +53,10 @@ hRanks <- function(true.data=NULL, noisy.data=NULL){
     }
     	
     # Calculate distances Di
-    Di <- dist2(true.data, noisy.data)
+    Di <- flexclust::dist2(true.data, noisy.data)
 	
     # Find the ranks of Di (row-wise)
-    Ri <- rowRanks(Di, ties.method='min')
+    Ri <- matrixStats::rowRanks(Di, ties.method='min')
     
     # Find the positions in matrix Di with ranks equal to 1
     I <- NA
@@ -65,10 +65,10 @@ hRanks <- function(true.data=NULL, noisy.data=NULL){
     }     
     
     # Calculate distances Dk
-    Dk <- dist2(true.data, true.data)
+    Dk <- flexclust::dist2(true.data, true.data)
 	
     # Find the ranks of Dk (row-wise)
-    Rk <- rowRanks(Dk, ties.method='min')
+    Rk <- matrixStats::rowRanks(Dk, ties.method='min')
     
     # Calculate the h-ranks
     h <- NA
