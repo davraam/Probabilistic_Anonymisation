@@ -1,4 +1,4 @@
-# Probabilistic_Anonymisation
+# Probabilistic Anonymisation
 R functions for (a) applying probabilistic anonymisation on individual-level data and (b) calculating a re-identification risk measure.
 
 The function probAnon() (Probabilistic Anonymisation) uses the addition of random noise with known properties to some or all variables in an input dataset to obscure the true values of individual-level records. The noise is tuned to achieve any given degree of anonymity to avoid identification by an ‘attacker’ via the linking of patterns based on the values of such variables. Probabilistic anonymisation can retain the actual data utility because there are efficient Bayesian MCMC algorithms that treat the generated noise as measurement errors and 'remove' the noise at the analysis stage since its characteristics are known. This leads to consistent model parameter estimates.
