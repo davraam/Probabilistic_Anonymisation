@@ -32,9 +32,6 @@
 #' 
 #' @author Avraam D.
 #' @export
-#' @examples {
-#' 
-#' }
 #'
 hRanks <- function(true.data=NULL, noisy.data=NULL){
 
