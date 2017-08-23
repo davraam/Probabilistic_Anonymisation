@@ -6,10 +6,10 @@
 #' @details The function applies a method that adds random noise to the variables of a given dataset.
 #' The method has been developed to add noise to some or all variables in a released pseudonymised dataset
 #' where the values of identifying variables for individuals of interest are also available to an external
-#' ‘attacker’ who wishes to identify those individuals so that they can interrogate their records in the
-#' dataset. To avoid such identification by an ‘attacker’ who wishes to use the linking of patterns based
+#' â€˜attackerâ€™ who wishes to identify those individuals so that they can interrogate their records in the
+#' dataset. To avoid such identification by an â€˜attackerâ€™ who wishes to use the linking of patterns based
 #' on the values of such variables, enough noise needs to be generated and added to these identifying
-#' variables. The noise can then be ‘removed’ at the analysis stage since its characteristics are known.
+#' variables. The noise can then be â€˜removedâ€™ at the analysis stage since its characteristics are known.
 #' The function first splits the input dataframe to two sub-dataframes, one for the continuous and one for
 #' the categorical variables. Then, random noise is added to continuous and categorical variables separately. 
 #' The random noise added to continuous variables follows a normal distribution with zero mean and variance 
@@ -28,9 +28,9 @@
 #' variables.
 #'
 #' @param seed, allows the user to set a certain random number generator. If this argument is not specified,
-#' the function bases the seed parameter on the local time (as determined by the computer’s internal clock).
+#' the function bases the seed parameter on the local time (as determined by the computerâ€™s internal clock).
 #'
-#' @param weights, is a vector $(w_1,…,w_s)$ that specifies the proportion of the variance of original
+#' @param weights, is a vector $(w_1,â€¦,w_s)$ that specifies the proportion of the variance of original
 #' variables that will be used as the variance of the added noise. The weights are used only for the 
 #' continuous variables of the input dataframe so the user should be sure that the length of \code{weights}
 #' vector is equal to $s$ which is the number of the continuous variables in the input dataframe.
@@ -45,9 +45,6 @@
 #' 
 #' @author Avraam D.
 #' @export
-#' @examples {
-#' 
-#' }
 #'
 probAnon <- function(dataframe, seed=NULL, weights=NULL, var.categorical=0.5){
 
