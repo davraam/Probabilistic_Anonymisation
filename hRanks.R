@@ -5,7 +5,7 @@
 #' 
 #' @details The function calculates a re-identification risk measure, the h-metric, between two input
 #' dataframes; one including the true data and the second including the anonymised data. This disclosure 
-#' risk measure was proposed by Goldstein and Shlomo (2017). Initially (step 1), the algorithm calculates
+#' risk measure was proposed by Goldstein and Shlomo. Initially (step 1), the algorithm calculates
 #' the Euclidean distances between each row in the true dataset and all rows in the noisy dataset (i.e. a
 #' pair-wise comparison that ultimately assesses all possible pairs). It then (step 2), ranks the distances
 #' in order to determine how close each individual’s record is to every record in the anonymised dataset
